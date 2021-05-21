@@ -9,4 +9,4 @@ This could provide a simple integrated solution for an essential MLOps component
 
 ## Architecture
 
-![architecture](./.images/architecture.png)
+![architecture](./.images/architecture.jpeg)
