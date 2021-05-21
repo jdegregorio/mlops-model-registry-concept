@@ -8,4 +8,4 @@ This could provide a simple integrated solution for an essential MLOps component
 
 ## Concept Architecture
 
-[LucidChart LINK](https://lucid.app/lucidchart/0b6d2af6-ca69-4d65-a46d-46befe5032e1/edit?page=0_0#)
+[LucidChart LINK](https://lucid.app/lucidchart/invitations/accept/inv_e63c33a4-b2f4-44b0-9287-85cc5ad45e89)
