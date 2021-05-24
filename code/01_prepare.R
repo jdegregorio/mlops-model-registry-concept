@@ -6,7 +6,11 @@
 
 # SETUP -------------------------------------------------------------------
 
-library(tidyverse)
+library(dplyr)
+library(readr)
+library(stringr)
+library(purrr)
+library(forcats)
 library(here)
 library(yaml)
 library(synthpop)

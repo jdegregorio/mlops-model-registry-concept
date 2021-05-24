@@ -10,9 +10,7 @@ COPY  . /project/
 WORKDIR /project/
 
 # Install dependencies
-RUN Rscript -e "options(repos = 'https://cran.rstudio.com/')" \
-  && Rscript -e "install.packages(c('packrat', 'Rtools', 'Rcpp'))" \
-  && Rscript -e "packrat::restore(prompt = FALSE, restart = TRUE)"
+RUN Rscript install.R
 
 # Default entrypoint
 ENTRYPOINT  ["/bin/bash"]
