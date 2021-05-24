@@ -14,7 +14,7 @@ library(tune)
 library(yardstick)
 
 # Load parameters
-params <- read_yaml(here("code", "params.yaml"))
+params <- read_yaml(here("params.yaml"))
 
 
 # TRAIN MODEL -------------------------------------------------------------
@@ -72,6 +72,7 @@ df_tune_grid <- mod_tune_grid %>%
 
 # Save tuning grid data
 write_rds(mod_tune_grid, here("out", "metrics", "tune_grid.rds"))
+write_rds(df_tune_grid, here("out", "metrics", "df_tune_grid.rds"))
 
 # Evaluate metrics and select best
 show_best(mod_tune_grid, "roc_auc")
@@ -115,11 +116,8 @@ df_metrics <- bind_rows(
 
 # Save evaluation
 write_rds(df_eval, here("out", "metrics", "df_eval.rds"))
-write_rds(
-  list(accuracy = eval_accuracy, precision = eval_precision, roc_auc = eval_roc_auc, roc_curve = df_roc),
-  here("out", "metrics", "metrics.rds")
-)
-
+write_rds(df_metrics, here("out", "metrics", "df_metrics.rds"))
+write_rds(df_roc, here("out", "metrics", "df_roc.rds"))
 
 # TRAIN FINAL MODEL ON FULL DATASET ---------------------------------------
 

@@ -11,7 +11,7 @@ library(here)
 library(yaml)
 library(synthpop)
 
-params <- read_yaml(here("code", "params.yaml"))
+params <- read_yaml(here("params.yaml"))
 
 # PREPARE DATA ------------------------------------------------------------
 
