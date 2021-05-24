@@ -1,0 +1,27 @@
+stages:
+  prepare:
+    cmd: RScript code/01_prepare.R
+    deps:
+      - data/raw/iris.csv
+    params:
+      - prepare.n_obs_syn
+    outs:
+      - data/processed/df_iris_orig.rds
+      - data/processed/df_iris_synth.rds
+  train:
+    cmd: RScript code/02_train.R
+    deps:
+      - data/processed/df_iris_synth.rds
+    params:
+      - cv.split_prop
+      - cv.folds
+      - cv.repeats
+      - tuning.grid_size
+    outs:
+      - out/metrics/df_eval.rds
+      - out/metrics/df_metrics.rds
+      - out/metrics/tune_grid.rds
+      - out/metrics/df_tune_grid.rds
+      - out/metrics/df_roc.rds
+      - out/models/model_eval.rds
+      - out/models/model_final.rds

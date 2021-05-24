@@ -1,0 +1,52 @@
+schema: '2.0'
+stages:
+  prepare:
+    cmd: RScript code/01_prepare.R
+    deps:
+    - path: data/raw/iris.csv
+      md5: d100dbed6c5ce6f74e0ba16127fa7e16
+      size: 3716
+    params:
+      params.yaml:
+        prepare.n_obs_syn: 1000
+    outs:
+    - path: data/processed/df_iris_orig.rds
+      md5: 007ebbffd5ac2b6401eeb7bf30e4ddc6
+      size: 6501
+    - path: data/processed/df_iris_synth.rds
+      md5: 55335529750cb6b04781c20de98c534e
+      size: 47274
+  train:
+    cmd: RScript code/02_train.R
+    deps:
+    - path: data/processed/df_iris_synth.rds
+      md5: 55335529750cb6b04781c20de98c534e
+      size: 47274
+    params:
+      params.yaml:
+        cv.folds: 5
+        cv.repeats: 3
+        cv.split_prop: 0.8
+        tuning.grid_size: 10
+    outs:
+    - path: out/metrics/df_eval.rds
+      md5: b64048bbf18af436178f0db954b417a4
+      size: 9064
+    - path: out/metrics/df_metrics.rds
+      md5: 4af8bdd40315ad5d0cf05202b9b18c94
+      size: 362
+    - path: out/metrics/df_roc.rds
+      md5: 05862594e1f258426ffd5cde446c4ac7
+      size: 1017
+    - path: out/metrics/df_tune_grid.rds
+      md5: 388771dafe0044a82b9c01882056ef70
+      size: 40334
+    - path: out/metrics/tune_grid.rds
+      md5: b0ef188fa36f2670aaf52952af641afc
+      size: 709695
+    - path: out/models/model_eval.rds
+      md5: 684db02ebd7b87cfab89fb35267e0b35
+      size: 263686
+    - path: out/models/model_final.rds
+      md5: 876e9e36715f6e7084cc53185c3594e3
+      size: 292157
