@@ -1,0 +1,8 @@
+prepare:
+  n_obs_syn: 1000
+cv:
+  split_prop: 0.80
+  folds: 5
+  repeats: 3
+tuning:
+  grid_size: 10
