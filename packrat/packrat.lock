@@ -39,10 +39,27 @@ Source: CRAN
 Version: 1.0.6
 Hash: d891b607ea796cf30abfe4795380423f
 
+Package: RcppEigen
+Source: CRAN
+Version: 0.3.3.9.1
+Hash: 383ce2e6f74705f7731bd8bf15982e42
+Requires: Rcpp
+
+Package: Rsolnp
+Source: CRAN
+Version: 1.16
+Hash: 0a1d2ee00c132ac390e478e17003f4c0
+Requires: truncnorm
+
 Package: SQUAREM
 Source: CRAN
 Version: 2021.1
 Hash: 5e94d696f9300f1fa24e226d11de90a2
+
+Package: TH.data
+Source: CRAN
+Version: 1.0-10
+Hash: bff8990750ac5a447518f3f049015988
 
 Package: askpass
 Source: CRAN
@@ -107,6 +124,12 @@ Version: 1.1.0
 Hash: be9d203e7849f73818b36f93e9273c2c
 Requires: rematch, tibble
 
+Package: classInt
+Source: CRAN
+Version: 0.4-3
+Hash: 40f1a7fc0254fffd9bf6e5ee046de859
+Requires: e1071
+
 Package: cli
 Source: CRAN
 Version: 2.5.0
@@ -117,6 +140,17 @@ Package: clipr
 Source: CRAN
 Version: 0.7.1
 Hash: 50bca21c0c36d24984b051077cb15cf3
+
+Package: cmm
+Source: CRAN
+Version: 0.12
+Hash: f9df1ba791d79f32a9b1b30ff77ca882
+
+Package: coin
+Source: CRAN
+Version: 1.4-1
+Hash: b640b28c0ee23eb3ca455d42ef70dba9
+Requires: libcoin, matrixStats, modeltools, multcomp, mvtnorm
 
 Package: colorspace
 Source: CRAN
@@ -181,6 +215,12 @@ Version: 1.1.0
 Hash: 88cbcca689e5da1f6f815b13eb3691b5
 Requires: crayon, data.table, dplyr, ellipsis, glue, lifecycle, rlang,
     tibble, tidyselect, vctrs
+
+Package: e1071
+Source: CRAN
+Version: 1.7-6
+Hash: af3a14a1b43af34bedbc4832f56c5661
+Requires: proxy
 
 Package: ellipsis
 Source: CRAN
@@ -387,6 +427,12 @@ Version: 1.1.1
 Hash: ec5891f8ae20de35b3d2b0478a98220c
 Requires: Rcpp
 
+Package: libcoin
+Source: CRAN
+Version: 1.0-8
+Hash: cf1e5a3b452d7de22c6c1c7ccc10a4f6
+Requires: mvtnorm
+
 Package: lifecycle
 Source: CRAN
 Version: 1.0.0
@@ -415,6 +461,11 @@ Version: 1.1
 Hash: 1b6a18fd395589425e338a47b999099f
 Requires: mime, xfun
 
+Package: matrixStats
+Source: CRAN
+Version: 0.58.0
+Hash: 13b757c6ddfb867e2f3ae282f088a221
+
 Package: memoise
 Source: CRAN
 Version: 2.0.0
@@ -425,6 +476,12 @@ Package: mime
 Source: CRAN
 Version: 0.10
 Hash: 20b0f90f3478d2baae76be49777ac9fe
+
+Package: mipfp
+Source: CRAN
+Version: 3.2.1
+Hash: e96c0df84fa22b46feb10fe34730fa10
+Requires: Rsolnp, cmm, numDeriv
 
 Package: modeldata
 Source: CRAN
@@ -438,11 +495,27 @@ Hash: 928bb1b05c02dc49cdb3c75ab39647ec
 Requires: broom, magrittr, purrr, rlang, tibble, tidyr, tidyselect,
     vctrs
 
+Package: modeltools
+Source: CRAN
+Version: 0.2-23
+Hash: 05444bbe2f8add50209cffe183c7dae3
+
+Package: multcomp
+Source: CRAN
+Version: 1.4-17
+Hash: fb46a25b511bffcc79a7f40c6dc04be6
+Requires: TH.data, mvtnorm, sandwich
+
 Package: munsell
 Source: CRAN
 Version: 0.5.0
 Hash: 38d0efee9bb99bef143bde41c4ce715c
 Requires: colorspace
+
+Package: mvtnorm
+Source: CRAN
+Version: 1.1-1
+Hash: 6e13acde49757399332c2950318c78dc
 
 Package: numDeriv
 Source: CRAN
@@ -478,6 +551,12 @@ Hash: 7cce991be84afa3a5acc5fe520c75a66
 Requires: dplyr, generics, globals, glue, magrittr, prettyunits, purrr,
     rlang, tibble, tidyr, vctrs
 
+Package: party
+Source: CRAN
+Version: 1.3-7
+Hash: 9c1952c7023c6a5c224cd768f545fc59
+Requires: coin, modeltools, mvtnorm, sandwich, strucchange, zoo
+
 Package: pillar
 Source: CRAN
 Version: 1.6.1
@@ -494,6 +573,11 @@ Source: CRAN
 Version: 1.8.6
 Hash: d4a3096ec14fbdbf50caeaf27f4e4711
 Requires: Rcpp
+
+Package: polspline
+Source: CRAN
+Version: 1.1.19
+Hash: f07e9b173a75a0c92553426e7bab863a
 
 Package: prettyunits
 Source: CRAN
@@ -518,6 +602,16 @@ Version: 1.2.2
 Hash: 209280eb751acf5899f7c69366e14bd3
 Requires: R6, crayon, hms, prettyunits
 
+Package: proto
+Source: CRAN
+Version: 1.0.0
+Hash: f9a2528572320c1e0bc8783dfd6e0fae
+
+Package: proxy
+Source: CRAN
+Version: 0.4-25
+Hash: 7855a088d7e2c622d740fa1248458cb6
+
 Package: ps
 Source: CRAN
 Version: 1.6.0
@@ -528,6 +622,17 @@ Source: CRAN
 Version: 0.3.4
 Hash: fb4c0edca61826ca0b5b33c828a7b276
 Requires: magrittr, rlang
+
+Package: randomForest
+Source: CRAN
+Version: 4.6-14
+Hash: e906cd13baafae063318f46d86c1d26d
+
+Package: ranger
+Source: CRAN
+Version: 0.12.1
+Hash: 55deb1fcb49d94c962c423b1816dc875
+Requires: Rcpp, RcppEigen
 
 Package: rappdirs
 Source: CRAN
@@ -608,6 +713,12 @@ Version: 1.0.0
 Hash: fd25205db1cfd31d27ffd6609ebe067f
 Requires: httr, lifecycle, magrittr, rlang, selectr, tibble, xml2
 
+Package: sandwich
+Source: CRAN
+Version: 3.0-0
+Hash: 91db49b94b7439c7caad630baa1121ca
+Requires: zoo
+
 Package: scales
 Source: CRAN
 Version: 1.1.1
@@ -637,6 +748,19 @@ Source: CRAN
 Version: 1.4.0
 Hash: 67da32dbb2a7a16f2ef124336358e54a
 Requires: glue, magrittr, stringi
+
+Package: strucchange
+Source: CRAN
+Version: 1.5-2
+Hash: e81ee8b23f804bd14da3834f51be5963
+Requires: sandwich, zoo
+
+Package: synthpop
+Source: CRAN
+Version: 1.6-0
+Hash: 8a7726a98b13314bef527c65c9175d4c
+Requires: classInt, ggplot2, mipfp, party, plyr, polspline, proto,
+    randomForest, ranger
 
 Package: sys
 Source: CRAN
@@ -690,6 +814,11 @@ Source: CRAN
 Version: 0.31
 Hash: 367f718b51aec5221f65972d8aabb18e
 Requires: xfun
+
+Package: truncnorm
+Source: CRAN
+Version: 1.0-8
+Hash: a5534b63255de05674140b3fc8c0e895
 
 Package: tune
 Source: CRAN
@@ -764,3 +893,8 @@ Source: CRAN
 Version: 0.0.8
 Hash: 94d0d2ab3a82b6f33dcb6be28bf5b877
 Requires: dplyr, generics, pROC, rlang, tidyselect, vctrs
+
+Package: zoo
+Source: CRAN
+Version: 1.8-9
+Hash: a157221cf26e87baa6b008442de46011
